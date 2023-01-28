@@ -4,6 +4,7 @@ import { Physics } from '@react-three/cannon'
 import Ground from './components/ground'
 import Fpv from './components/fpv'
 import Player from './components/player'
+import Cubes from './components/cubes'
 
 function App () {
   return (
@@ -13,6 +14,7 @@ function App () {
         <ambientLight intensity={0.5} />
         <Fpv />
         <Physics>
+          <Cubes />
           <Player />
           <Ground />
         </Physics>
