@@ -4,20 +4,9 @@ import { useStore } from '../hooks/use-store'
 import * as images from '../images/images'
 
 const TextureSelector = () => {
-  const [visible, setVisible] = useState(false)
   const [texture, setTexture] = useStore(state => [state.texture, state.setTexture])
 
   const { dirt, grass, glass, wood, log } = useKeyboard()
-
-  useEffect(() => {
-    const visibilityTimeout = setTimeout(() => {
-      setVisible(false)
-    }, 1800)
-    setVisible(true)
-    return () => {
-      clearTimeout(visibilityTimeout)
-    }
-  }, [texture])
 
   useEffect(() => {
     const options = {
@@ -38,7 +27,7 @@ const TextureSelector = () => {
   }, [dirt, grass, glass, wood, log])
 
   return (
-    <div className={`texture-selector ${visible ? '' : 'hidden'}`}>
+    <div className='texture-selector'>
       {Object
         .entries(images)
         .map(([imgKey, image]) => {
