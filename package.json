@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --base=./",
     "preview": "vite preview",
     "setup": "rimraf node_modules package-lock.json && npm i",
     "deploy": "gh-pages -d dist"
