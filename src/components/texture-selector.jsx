@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { useKeyboard } from '../hooks/use-keyboard'
 import { useStore } from '../hooks/use-store'
 import * as images from '../images/images'
